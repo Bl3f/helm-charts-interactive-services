@@ -49,11 +49,7 @@ spec:
   {{- if and .Values.ingress.ingressClassName (eq "true" (include "library-chart.ingress.supportsIngressClassname" .)) }}
   ingressClassName: {{ .Values.ingress.ingressClassName | quote }}
   {{- end }}
-{{- if .Values.ingress.tls }}
-  tls:
-    - hosts:
-        - {{ .Values.ingress.hostname | quote }}
-{{- end }}
+
   rules:
     - host: {{ .Values.ingress.hostname | quote }}
       http:
