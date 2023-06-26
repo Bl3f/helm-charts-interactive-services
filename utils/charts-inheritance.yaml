@@ -1,3 +1,5 @@
+library-chart: []
+
 #jupyter-python:
 #  jupyter-r:
 #    description: The JupyterLab IDE with R and a collection of standard data science packages.
