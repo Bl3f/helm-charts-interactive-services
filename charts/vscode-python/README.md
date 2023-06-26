@@ -15,7 +15,7 @@ The Visual Studio Code IDE with Python, Julia, and a collection of standard data
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://lab.blef.fr/helm-charts-interactive-services | library-chart | 1.3.15 |
+| https://inseefrlab.github.io/helm-charts-interactive-services | library-chart | 1.3.15 |
 
 ## Values
 
