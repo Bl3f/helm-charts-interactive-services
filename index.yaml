@@ -2,6 +2,28 @@ apiVersion: v1
 entries:
   jupyter-python:
   - apiVersion: v2
+    created: "2023-06-26T14:23:08.868270162Z"
+    dependencies:
+    - name: library-chart
+      repository: https://lab.blef.fr/helm-charts-interactive-services
+      version: 1.3.15
+    description: The JupyterLab IDE with Python, Julia, and a collection of standard
+      data science packages.
+    digest: f7f3059e0b688374335ca50b235de3cef2e65401c43dcc89edcc6f7f5b761941
+    home: https://jupyter.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png
+    keywords:
+    - Jupyter
+    - Python
+    name: jupyter-python
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/jupyter-python-1.11.3/jupyter-python-1.11.3.tgz
+    version: 1.11.3
+  - apiVersion: v2
     created: "2023-05-10T12:15:27.783458152Z"
     dependencies:
     - name: library-chart
@@ -24,6 +46,28 @@ entries:
     - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/jupyter-python-1.11.2/jupyter-python-1.11.2.tgz
     version: 1.11.2
   jupyter-r:
+  - apiVersion: v2
+    created: "2023-06-26T14:23:09.042991563Z"
+    dependencies:
+    - name: library-chart
+      repository: https://lab.blef.fr/helm-charts-interactive-services
+      version: 1.3.15
+    description: The JupyterLab IDE with R and a collection of standard data science
+      packages.
+    digest: 302a930fe6d2a3018187e0734e575c922d08973589ef6eccd412715ed2d9b730
+    home: https://jupyter.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png
+    keywords:
+    - Jupyter
+    - Python
+    name: jupyter-r
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/jupyter-r-1.11.3/jupyter-r-1.11.3.tgz
+    version: 1.11.3
   - apiVersion: v2
     created: "2023-05-10T12:15:28.378798841Z"
     dependencies:
@@ -57,6 +101,27 @@ entries:
     version: 1.3.15
   rstudio:
   - apiVersion: v2
+    created: "2023-06-26T14:23:09.215947922Z"
+    dependencies:
+    - name: library-chart
+      repository: https://lab.blef.fr/helm-charts-interactive-services
+      version: 1.3.15
+    description: The RStudio IDE with a collection of standard data science packages.
+    digest: 63a22d82daf34f2671ce076d7eef4ac3ca13acd07e3da74540a26775086c0e38
+    home: https://www.rstudio.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/rstudio.png
+    keywords:
+    - RStudio
+    - R
+    name: rstudio
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/rstudio-1.12.3/rstudio-1.12.3.tgz
+    version: 1.12.3
+  - apiVersion: v2
     created: "2023-05-10T12:15:28.837590229Z"
     dependencies:
     - name: library-chart
@@ -79,6 +144,28 @@ entries:
     version: 1.12.2
   vscode-python:
   - apiVersion: v2
+    created: "2023-06-26T14:23:09.410001365Z"
+    dependencies:
+    - name: library-chart
+      repository: https://lab.blef.fr/helm-charts-interactive-services
+      version: 1.3.15
+    description: The Visual Studio Code IDE with Python, Julia, and a collection of
+      standard data science packages.
+    digest: 98a4938a7f428a983cdc2a51623df17f77a83e24e6eee2a62a0f7a6e89cd1f34
+    home: https://code.visualstudio.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/vscode.png
+    keywords:
+    - VSCode
+    - Python
+    name: vscode-python
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/Bl3f/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/vscode-python-1.9.3/vscode-python-1.9.3.tgz
+    version: 1.9.3
+  - apiVersion: v2
     created: "2023-05-10T12:15:29.312524717Z"
     dependencies:
     - name: library-chart
@@ -100,4 +187,4 @@ entries:
     urls:
     - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/vscode-python-1.9.2/vscode-python-1.9.2.tgz
     version: 1.9.2
-generated: "2023-05-23T20:41:12.884567911Z"
+generated: "2023-06-26T14:23:09.410024165Z"
