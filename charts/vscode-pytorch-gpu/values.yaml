@@ -89,7 +89,7 @@ networking:
     port: 5000
 ingress:
   enabled: false
-  tls: true
+  tls: false
   ingressClassName: ''
   annotations: []
   hostname: chart-example.local
