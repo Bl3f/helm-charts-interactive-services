@@ -47,7 +47,7 @@ The VSCode IDE with Python and the deep-learning framework TensorFlow.
 | ingress.enabled | bool | `false` |  |
 | ingress.hostname | string | `"chart-example.local"` |  |
 | ingress.ingressClassName | string | `""` |  |
-| ingress.tls | bool | `true` |  |
+| ingress.tls | bool | `false` |  |
 | ingress.userHostname | string | `"chart-example-user.local"` |  |
 | init.personalInit | string | `""` |  |
 | init.personalInitArgs | string | `""` |  |
