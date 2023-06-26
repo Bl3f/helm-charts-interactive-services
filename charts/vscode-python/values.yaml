@@ -135,7 +135,7 @@ networking:
 
 ingress:
   enabled: false
-  tls: false
+  tls: true
   ingressClassName: ""
   annotations: []
     # kubernetes.io/tls-acme: "true"
