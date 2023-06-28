@@ -2,17 +2,6 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
-    "keycloak": {
-      "description": "[Test Christophe]",
-      "type": "object",
-      "properties": {
-        "enabled": {
-          "type": "boolean",
-          "description": "Enable?",
-          "default": true
-        }
-      }
-    },
     "service": {
       "description": "Service specific configuration",
       "type": "object",
@@ -221,6 +210,18 @@
       "description": "security specific configuration",
       "type": "object",
       "properties": {
+        "keycloak": {
+          "type": "string",
+          "description": "keycloak",
+          "default": "keycloak",
+          "render": "keycloak",
+          "x-form": {
+            "value": "{{project.password}}"
+          },
+          "x-onyxia": {
+            "overwriteDefaultWith": "{{project.password}}"
+          }
+        },
         "password": {
           "type": "string",
           "description": "Password",
