@@ -11,7 +11,8 @@
                     "description": "Enable?",
                     "default": true
                 }
-            },
+            }
+        },
         "service": {
             "description": "Service specific configuration",
             "type": "object",
