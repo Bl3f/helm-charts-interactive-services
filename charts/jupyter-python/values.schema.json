@@ -2,6 +2,16 @@
     "$schema": "http://json-schema.org/schema#",
     "type": "object",
     "properties": {
+        "keycloak": {
+            "description": "[Test Christophe]",
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean",
+                    "description": "Enable?",
+                    "default": true
+                }
+            },
         "service": {
             "description": "Service specific configuration",
             "type": "object",
