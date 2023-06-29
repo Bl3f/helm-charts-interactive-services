@@ -1,6 +1,6 @@
 # jupyter-python
 
-![Version: 1.11.7](https://img.shields.io/badge/Version-1.11.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.11.8](https://img.shields.io/badge/Version-1.11.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The JupyterLab IDE with Python, Julia, and a collection of standard data science packages.
 
@@ -47,7 +47,7 @@ The JupyterLab IDE with Python, Julia, and a collection of standard data science
 | ingress.enabled | bool | `false` |  |
 | ingress.hostname | string | `"chart-example.local"` |  |
 | ingress.ingressClassName | string | `""` |  |
-| ingress.tls | bool | `true` |  |
+| ingress.tls | bool | `false` |  |
 | ingress.userHostname | string | `"chart-example-user.local"` |  |
 | init.personalInit | string | `""` |  |
 | init.personalInitArgs | string | `""` |  |
