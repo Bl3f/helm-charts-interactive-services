@@ -93,7 +93,7 @@ networking:
     port: 4040
 ingress:
   enabled: false
-  tls: true
+  tls: false
   ingressClassName: ''
   annotations: []
   hostname: chart-example.local
