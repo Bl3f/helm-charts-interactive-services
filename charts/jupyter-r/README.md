@@ -1,6 +1,6 @@
 # jupyter-r
 
-![Version: 1.11.5](https://img.shields.io/badge/Version-1.11.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.11.6](https://img.shields.io/badge/Version-1.11.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The JupyterLab IDE with R and a collection of standard data science packages.
 
@@ -53,6 +53,9 @@ The JupyterLab IDE with R and a collection of standard data science packages.
 | init.personalInitArgs | string | `""` |  |
 | init.regionInit | string | `""` |  |
 | init.standardInitPath | string | `"/opt/onyxia-init.sh"` |  |
+| keycloak.base_url | string | `""` |  |
+| keycloak.client_id | string | `""` |  |
+| keycloak.client_secret | string | `""` |  |
 | kubernetes.enabled | bool | `false` |  |
 | kubernetes.role | string | `"view"` |  |
 | metaflow.configMapName | string | `""` |  |
