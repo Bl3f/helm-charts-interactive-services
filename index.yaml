@@ -2,6 +2,28 @@ apiVersion: v1
 entries:
   jupyter-python:
   - apiVersion: v2
+    created: "2023-06-29T08:33:12.466233384Z"
+    dependencies:
+    - name: library-chart
+      repository: https://lab.blef.fr/helm-charts-interactive-services
+      version: 1.3.15
+    description: The JupyterLab IDE with Python, Julia, and a collection of standard
+      data science packages.
+    digest: b044a889846302e592ec4e0496adcd6237e7225b863ee2cc847849e0d55b0c8f
+    home: https://jupyter.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png
+    keywords:
+    - Jupyter
+    - Python
+    name: jupyter-python
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/jupyter-python-1.11.9/jupyter-python-1.11.9.tgz
+    version: 1.11.9
+  - apiVersion: v2
     created: "2023-06-29T07:19:06.055839649Z"
     dependencies:
     - name: library-chart
@@ -156,6 +178,28 @@ entries:
     - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/jupyter-python-1.11.2/jupyter-python-1.11.2.tgz
     version: 1.11.2
   jupyter-r:
+  - apiVersion: v2
+    created: "2023-06-29T08:33:12.604760834Z"
+    dependencies:
+    - name: library-chart
+      repository: https://lab.blef.fr/helm-charts-interactive-services
+      version: 1.3.15
+    description: The JupyterLab IDE with R and a collection of standard data science
+      packages.
+    digest: 92f4b1c6805951203dbc5c936a7a1c00fcc95e8e4d922f1fd685cb2f2ec86916
+    home: https://jupyter.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png
+    keywords:
+    - Jupyter
+    - Python
+    name: jupyter-r
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/jupyter-r-1.11.9/jupyter-r-1.11.9.tgz
+    version: 1.11.9
   - apiVersion: v2
     created: "2023-06-29T07:19:06.215195078Z"
     dependencies:
@@ -429,4 +473,4 @@ entries:
     urls:
     - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/vscode-python-1.9.2/vscode-python-1.9.2.tgz
     version: 1.9.2
-generated: "2023-06-29T07:19:06.215314177Z"
+generated: "2023-06-29T08:33:12.604809334Z"
