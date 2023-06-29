@@ -42,8 +42,8 @@
                         "description": "supported versions",
                         "type": "string",
                         "listEnum": [
-                            "inseefrlab/onyxia-jupyter-python:py3.10.9",
-                            "inseefrlab/onyxia-jupyter-python:py3.9.16"
+                            "cblefari/onyxia-jupyter-python:py3.10.9",
+                            "cblefari/onyxia-jupyter-python:py3.9.16"
                         ],
                         "render": "list",
                         "pattern": "^[a-z0-9-_./]+(:[a-z0-9-_.]+)?$",
@@ -51,7 +51,7 @@
                             "value": true,
                             "path": "service/image/custom/enabled"
                         },
-                        "default": "inseefrlab/onyxia-jupyter-python:py3.10.9"
+                        "default": "cblefari/onyxia-jupyter-python:py3.10.9"
                       },
                       "custom" : {
                         "description": "use a custom jupyter docker image",
@@ -66,7 +66,7 @@
                           "version": {
                             "description": "jupyter unsupported version",
                             "type": "string",
-                            "default": "inseefrlab/onyxia-jupyter-python:py3.10.9",
+                            "default": "cblefari/onyxia-jupyter-python:py3.10.9",
                             "pattern": "^[a-z0-9-_./]+(:[a-z0-9-_.]+)?$",
                             "hidden": {
                                 "value": false,
