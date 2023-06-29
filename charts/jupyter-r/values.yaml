@@ -21,6 +21,10 @@ init:
 environment:
   user: onyxia
   group: users
+keycloak:
+  client_id: ''
+  client_secret: ''
+  base_url: ''
 s3:
   enabled: false
   configMapName: ''

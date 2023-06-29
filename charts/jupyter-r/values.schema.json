@@ -2,6 +2,28 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
+    "keycloak": {
+      "description": "Keycloak configuration",
+      "type": "object",
+      "properties": {
+        "client_id": {
+          "description": "The CLIENT_ID for the openid connection",
+          "title": "CLIENT_ID",
+          "type": "string"
+        },
+        "client_secret": {
+          "description": "The CLIENT_SECRET for the openid connection",
+          "title": "CLIENT_SECRET",
+          "type": "string"
+        },
+        "base_url": {
+          "description": "The BASE_URL should include the server and the realm",
+          "title": "BASE_URL",
+          "type": "string",
+          "default": "https://keycloak.idee.depp.in.adc.education.fr/realms/master"
+        }
+      }
+    },
     "service": {
       "description": "Service specific configuration",
       "type": "object",
