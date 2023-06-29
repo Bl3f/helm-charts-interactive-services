@@ -85,7 +85,7 @@ networking:
   type: ClusterIP
   clusterIP: None
   service:
-    port: 8888
+    port: 8000
   user:
     enabled: false
     port: 5000
