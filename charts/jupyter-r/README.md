@@ -1,6 +1,6 @@
 # jupyter-r
 
-![Version: 1.11.9](https://img.shields.io/badge/Version-1.11.9-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.11.10](https://img.shields.io/badge/Version-1.11.10-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The JupyterLab IDE with R and a collection of standard data science packages.
 
@@ -62,7 +62,7 @@ The JupyterLab IDE with R and a collection of standard data science packages.
 | mlflow.configMapName | string | `""` |  |
 | nameOverride | string | `""` |  |
 | networking.clusterIP | string | `"None"` |  |
-| networking.service.port | int | `8888` |  |
+| networking.service.port | int | `8000` |  |
 | networking.sparkui.port | int | `4040` |  |
 | networking.type | string | `"ClusterIP"` |  |
 | networking.user.enabled | bool | `false` |  |
