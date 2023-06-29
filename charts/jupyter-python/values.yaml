@@ -27,6 +27,11 @@ environment:
   user: onyxia
   group: users
 
+keycloak:
+  client_id: ""
+  client_secret: ""
+  base_url: ""
+
 s3:
   # Specifies whether a config map should be created
   enabled: false

@@ -115,7 +115,27 @@ spec:
             {{- if .Values.environment.root }}
             - name: GRANT_SUDO
               value: "yes"
-            {{- end }}          
+            {{- end }}
+            {{ - if .Values.keycloak.client_id }}
+            - name: KEYCLOAK_CLIENT_ID
+              value: {{ .Values.keycloak.client_id }}
+            {{ - end }}
+            {{ - if .Values.keycloak.client_secret }}
+            - name: KEYCLOAK_CLIENT_SECRET
+              value: {{ .Values.keycloak.client_secret }}
+            {{ - end }}
+            {{ - if .Values.keycloak.base_url }}
+            - name: KEYCLOAK_AUTHORIZE_URL
+              value: "{{ .Values.keycloak.base_url }}/protocol/openid-connect/auth"
+            {{ - end }}
+            {{ - if .Values.keycloak.base_url }}
+            - name: KEYCLOAK_TOKEN_URL
+              value: "{{ .Values.keycloak.base_url }}/protocol/openid-connect/token"
+            {{ - end }}
+            {{ - if .Values.keycloak.base_url }}
+            - name: KEYCLOAK_USERDATA_URL
+              value: "{{ .Values.keycloak.base_url }}/protocol/openid-connect/userinfo"
+            {{ - end }}
           envFrom: 
             {{- if .Values.s3.enabled }}
             - configMapRef:
