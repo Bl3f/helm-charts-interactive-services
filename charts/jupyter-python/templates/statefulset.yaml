@@ -100,6 +100,8 @@ spec:
               value: {{ .Values.environment.group }}
             - name: ROOT_PROJECT_DIRECTORY
               value: /home/{{ .Values.environment.user }}/work
+            - name: JUPYTERHUB_CRYPT_KEY
+              value: e54b79016bb899b44594ce65fc1fb556ec8b585b2782a5fa2bda3da578153bac
             {{- if .Values.init.regionInit }}
             - name: REGION_INIT_SCRIPT
               value: {{ .Values.init.regionInit }}
