@@ -1,6 +1,6 @@
 # jupyter-r
 
-![Version: 1.11.11](https://img.shields.io/badge/Version-1.11.11-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.11.12](https://img.shields.io/badge/Version-1.11.12-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The JupyterLab IDE with R and a collection of standard data science packages.
 
