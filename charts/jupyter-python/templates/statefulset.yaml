@@ -136,6 +136,10 @@ spec:
             - name: KEYCLOAK_USERDATA_URL
               value: "{{ .Values.keycloak.base_url }}/protocol/openid-connect/userinfo"
             {{- end }}
+            {{- if .Values.keycloak.base_url }}
+            - name: KEYCLOAK_OIDC_ISSUER
+              value: "{{ .Values.keycloak.base_url }}"
+            {{- end }}
           envFrom: 
             {{- if .Values.s3.enabled }}
             - configMapRef:
