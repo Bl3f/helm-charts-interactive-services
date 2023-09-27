@@ -109,7 +109,7 @@ networking:
   type: ClusterIP
   clusterIP: None
   service:
-    port: 80
+    port: 3002
   user:
     enabled: false
     port: 5000
