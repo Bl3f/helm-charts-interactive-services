@@ -69,6 +69,18 @@ spec:
             {{- end }}
             - name: RSTUDIO_URL
               value: {{ .Chart.Name }}:8787
+          livenessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.networking.service.port }}
+          readinessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.networking.service.port }}
+          startupProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.networking.service.port }}
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
@@ -111,7 +123,7 @@ spec:
             - name: PERSONAL_INIT_ARGS
               value: {{ .Values.init.personalInitArgs }}
             {{- end }}
-          envFrom: 
+          envFrom:
             {{- if .Values.s3.enabled }}
             - configMapRef:
                 name: {{ include "library-chart.configMapNameS3" . }}
@@ -128,18 +140,6 @@ spec:
             - configMapRef:
                 name: {{ include "library-chart.configMapNameRepository" . }}
             {{- end }}
-          livenessProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.networking.service.port }}
-          readinessProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.networking.service.port }}
-          startupProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.networking.service.port }}
             failureThreshold: 60
             initialDelaySeconds: 10
             periodSeconds: 10
