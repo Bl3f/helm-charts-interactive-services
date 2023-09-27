@@ -52,6 +52,23 @@ spec:
       subdomain: {{ include "library-chart.fullname" . }}
       hostname: rstudio
       containers:
+        - name: {{ .Chart.Name }}-nginx-sso-proxy
+          image: cblefari/onyxia-nginx-sso:latest
+          env:
+            {{- if .Values.keycloak.client_id }}
+            - name: KEYCLOAK_CLIENT_ID
+              value: {{ .Values.keycloak.client_id }}
+            {{- end }}
+            {{- if .Values.keycloak.client_secret }}
+            - name: KEYCLOAK_SECRET
+              value: {{ .Values.keycloak.client_secret }}
+            {{- end }}
+            {{- if .Values.keycloak.base_url }}
+            - name: KEYCLOAK_URL
+              value: {{ .Values.keycloak.base_url }}
+            {{- end }}
+            - name: RSTUDIO_URL
+              value: {{ .Chart.Name }}:8787
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
