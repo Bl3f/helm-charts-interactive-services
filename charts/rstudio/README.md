@@ -1,6 +1,6 @@
 # rstudio
 
-![Version: 1.12.12](https://img.shields.io/badge/Version-1.12.12-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.12.13](https://img.shields.io/badge/Version-1.12.13-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The RStudio IDE with a collection of standard data science packages.
 
@@ -54,7 +54,7 @@ The RStudio IDE with a collection of standard data science packages.
 | kubernetes.role | string | `"view"` |  |
 | nameOverride | string | `""` |  |
 | networking.clusterIP | string | `"None"` |  |
-| networking.service.port | int | `80` |  |
+| networking.service.port | int | `3002` |  |
 | networking.sparkui.port | int | `4040` |  |
 | networking.type | string | `"ClusterIP"` |  |
 | networking.user.enabled | bool | `false` |  |
