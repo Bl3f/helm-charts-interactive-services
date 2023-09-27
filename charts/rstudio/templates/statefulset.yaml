@@ -68,7 +68,7 @@ spec:
               value: {{ .Values.keycloak.base_url }}
             {{- end }}
             - name: RSTUDIO_URL
-              value: {{ .Chart.Name }}:8787
+              value: "{{ .Chart.Name }}:8787"
           livenessProbe:
             httpGet:
               path: /
