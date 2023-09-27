@@ -20,7 +20,7 @@
               "description": "The BASE_URL should include the server and the realm",
               "title": "BASE_URL",
               "type": "string",
-              "default": "https://keycloak.idee.depp.in.adc.education.fr"
+              "default": "keycloak.idee.depp.in.adc.education.fr"
             }
           }
         },
