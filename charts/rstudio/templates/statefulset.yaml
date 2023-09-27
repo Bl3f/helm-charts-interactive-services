@@ -54,6 +54,7 @@ spec:
       containers:
         - name: {{ .Chart.Name }}-nginx-sso-proxy
           image: cblefari/onyxia-nginx-sso:latest
+          imagePullPolicy: {{ .Values.service.image.pullPolicy }}
           env:
             - name: RSTUDIO_URL
               value: "{{ .Chart.Name }}:8787"
