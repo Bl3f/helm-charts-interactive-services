@@ -55,6 +55,8 @@ spec:
         - name: {{ .Chart.Name }}-nginx-sso-proxy
           image: cblefari/onyxia-nginx-sso:latest
           env:
+            - name: RSTUDIO_URL
+              value: "{{ .Chart.Name }}:8787"
             {{- if .Values.keycloak.client_id }}
             - name: KEYCLOAK_CLIENT_ID
               value: {{ .Values.keycloak.client_id }}
@@ -67,8 +69,6 @@ spec:
             - name: KEYCLOAK_URL
               value: {{ .Values.keycloak.base_url }}
             {{- end }}
-            - name: RSTUDIO_URL
-              value: "{{ .Chart.Name }}:8787"
           livenessProbe:
             httpGet:
               path: /
