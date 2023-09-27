@@ -146,6 +146,23 @@ spec:
             - configMapRef:
                 name: {{ include "library-chart.configMapNameRepository" . }}
             {{- end }}
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8787
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8787
+          startupProbe:
+            httpGet:
+              path: /
+              port: 8787
+            failureThreshold: 60
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 5
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
