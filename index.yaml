@@ -541,6 +541,27 @@ entries:
     version: 1.3.15
   rstudio:
   - apiVersion: v2
+    created: "2023-10-05T09:02:32.416983685Z"
+    dependencies:
+    - name: library-chart
+      repository: https://lab.blef.fr/helm-charts-interactive-services
+      version: 1.3.15
+    description: The RStudio IDE with a collection of standard data science packages.
+    digest: 65e504e522211dfb27cdbffe9d00e03e0d7d727290fb1aa7af5d603ed9a15e10
+    home: https://www.rstudio.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/rstudio.png
+    keywords:
+    - RStudio
+    - R
+    name: rstudio
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/rstudio-1.12.17/rstudio-1.12.17.tgz
+    version: 1.12.17
+  - apiVersion: v2
     created: "2023-10-05T06:48:39.847346232Z"
     dependencies:
     - name: library-chart
@@ -922,4 +943,4 @@ entries:
     urls:
     - https://github.com/Bl3f/helm-charts-interactive-services/releases/download/vscode-python-1.9.2/vscode-python-1.9.2.tgz
     version: 1.9.2
-generated: "2023-10-05T06:48:39.848729254Z"
+generated: "2023-10-05T09:02:32.417240488Z"
