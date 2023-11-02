@@ -80,7 +80,7 @@ spec:
             - name: KEYCLOAK_CLIENT_ID
               value: {{ .Values.keycloak.client_id }}
             {{- end }}
-            {{- if .Values.keycloak.client_secret } }
+            {{- if .Values.keycloak.client_secret }}
             - name: KEYCLOAK_SECRET
               value: {{ .Values.keycloak.client_secret }}
             {{- end }}
