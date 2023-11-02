@@ -70,6 +70,41 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
+        - name: {{ .Chart.Name }}-nginx-sso-proxy
+          image: cblefari/onyxia-nginx-sso:latest
+          imagePullPolicy: {{ .Values.service.image.pullPolicy }}
+          env:
+            - name: RSTUDIO_URL
+              value: "0.0.0.0:8080"
+            {{- if .Values.keycloak.client_id }}
+            - name: KEYCLOAK_CLIENT_ID
+              value: {{ .Values.keycloak.client_id }}
+            {{- end }}
+            {{- if .Values.keycloak.client_secret } }
+            - name: KEYCLOAK_SECRET
+              value: {{ .Values.keycloak.client_secret }}
+            {{- end }}
+            {{- if .Values.keycloak.base_url }}
+            - name: KEYCLOAK_URL
+              value: {{ .Values.keycloak.base_url }}
+            {{- end }}
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: {{ .Values.networking.service.port }}
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: {{ .Values.networking.service.port }}
+          startupProbe:
+            httpGet:
+              path: /health
+              port: {{ .Values.networking.service.port }}
+            failureThreshold: 60
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 5
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
@@ -134,11 +169,11 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: {{ .Values.networking.service.port }} 
+              port: 8080
           readinessProbe:
             httpGet:
               path: /
-              port: {{ .Values.networking.service.port }}
+              port: 8080
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
