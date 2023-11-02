@@ -1,6 +1,6 @@
 # vscode-python
 
-![Version: 1.9.5](https://img.shields.io/badge/Version-1.9.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.9.6](https://img.shields.io/badge/Version-1.9.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The Visual Studio Code IDE with Python, Julia, and a collection of standard data science packages.
 
@@ -54,6 +54,9 @@ The Visual Studio Code IDE with Python, Julia, and a collection of standard data
 | init.regionInit | string | `""` |  |
 | init.regionInitCheckSum | string | `""` |  |
 | init.standardInitPath | string | `"/opt/onyxia-init.sh"` |  |
+| keycloak.base_url | string | `""` |  |
+| keycloak.client_id | string | `""` |  |
+| keycloak.client_secret | string | `""` |  |
 | kubernetes.enabled | bool | `true` |  |
 | kubernetes.role | string | `"view"` |  |
 | metaflow.configMapName | string | `""` |  |
