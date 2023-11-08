@@ -142,7 +142,8 @@ ingress:
   enabled: false
   tls: false
   ingressClassName: ""
-  annotations: []
+  annotations:
+    nginx.org/websocket-services: {{ .Chart.Name }}
     # kubernetes.io/tls-acme: "true"
   hostname: chart-example.local
   userHostname: chart-example-user.local
