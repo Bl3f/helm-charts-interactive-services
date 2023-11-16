@@ -75,7 +75,7 @@ spec:
           imagePullPolicy: {{ .Values.service.image.pullPolicy }}
           env:
             - name: RSTUDIO_URL
-              value: "0.0.0.0:8080"
+              value: "0.0.0.0:5000"
             {{- if .Values.keycloak.client_id }}
             - name: KEYCLOAK_CLIENT_ID
               value: {{ .Values.keycloak.client_id }}
@@ -169,11 +169,11 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: 8080
+              port: 5000
           readinessProbe:
             httpGet:
               path: /
-              port: 8080
+              port: 5000
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
