@@ -1,6 +1,6 @@
 # vscode-python
 
-![Version: 1.9.9](https://img.shields.io/badge/Version-1.9.9-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.9.10](https://img.shields.io/badge/Version-1.9.10-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The Visual Studio Code IDE with Python, Julia, and a collection of standard data science packages.
 
@@ -60,6 +60,7 @@ The Visual Studio Code IDE with Python, Julia, and a collection of standard data
 | kubernetes.enabled | bool | `true` |  |
 | kubernetes.role | string | `"view"` |  |
 | metaflow.configMapName | string | `""` |  |
+| minio.url | string | `""` |  |
 | mlflow.configMapName | string | `""` |  |
 | nameOverride | string | `""` |  |
 | networking.clusterIP | string | `"None"` |  |
