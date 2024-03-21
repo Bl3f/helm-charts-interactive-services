@@ -104,6 +104,10 @@ spec:
               value: e54b79016bb899b44594ce65fc1fb556ec8b585b2782a5fa2bda3da578153bac
             - name: PROJECT_HOSTNAME
               value: {{ .Values.ingress.hostname | quote }}
+            {{- if .Values.minio.url }}
+            - name: MINIO_URL
+              value: {{ .Values.minio.url }}
+            {{- end }}
             {{- if .Values.init.regionInit }}
             - name: REGION_INIT_SCRIPT
               value: {{ .Values.init.regionInit }}

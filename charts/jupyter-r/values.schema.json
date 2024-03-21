@@ -24,6 +24,17 @@
         }
       }
     },
+    "minio": {
+      "description": "Minio configuration",
+      "type": "object",
+      "properties": {
+        "url": {
+          "description": "The URL of the minio server",
+          "title": "URL",
+          "type": "string"
+        }
+      }
+    },
     "service": {
       "description": "Service specific configuration",
       "type": "object",

@@ -25,6 +25,8 @@ keycloak:
   client_id: ''
   client_secret: ''
   base_url: ''
+minio:
+  url: ''
 s3:
   enabled: false
   configMapName: ''
