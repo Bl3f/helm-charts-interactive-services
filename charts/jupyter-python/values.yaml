@@ -32,6 +32,9 @@ keycloak:
   client_secret: ""
   base_url: ""
 
+minio:
+  url: ""
+
 s3:
   # Specifies whether a config map should be created
   enabled: false
