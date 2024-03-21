@@ -111,6 +111,9 @@ keycloak:
   client_secret: ""
   base_url: ""
 
+minio:
+  url: ""
+
 kubernetes:
   enabled: true
   role: "view"

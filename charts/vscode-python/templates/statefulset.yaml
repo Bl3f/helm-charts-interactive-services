@@ -76,6 +76,10 @@ spec:
           env:
             - name: RSTUDIO_URL
               value: "0.0.0.0:5000"
+            {{- if .Values.minio.url }}
+            - name: MINIO_URL
+              value: {{ .Values.minio.url }}
+            {{- end }}
             {{- if .Values.keycloak.client_id }}
             - name: KEYCLOAK_CLIENT_ID
               value: {{ .Values.keycloak.client_id }}
