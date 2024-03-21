@@ -43,7 +43,7 @@ The Visual Studio Code IDE with Python, Julia, and a collection of standard data
 | git.name | string | `""` |  |
 | hive.configMapName | string | `""` |  |
 | imagePullSecrets | list | `[]` |  |
-| ingress.annotations."nginx.org/websocket-services". | string | `nil` |  |
+| ingress.annotations."nginx.org/websocket-services" | string | `"{{ $.Chart.Name }}"` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.hostname | string | `"chart-example.local"` |  |
 | ingress.ingressClassName | string | `""` |  |
