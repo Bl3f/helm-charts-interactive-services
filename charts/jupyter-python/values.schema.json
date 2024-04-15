@@ -16,6 +16,11 @@
               "title": "CLIENT_SECRET",
               "type": "string"
             },
+            "scope": {
+              "description": "The SCOPE for the openid connection",
+              "title": "SCOPE",
+              "type": "string"
+            },
             "base_url": {
               "description": "The BASE_URL should include the server and the realm",
               "title": "BASE_URL",
