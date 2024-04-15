@@ -25,6 +25,7 @@ keycloak:
   client_id: ''
   client_secret: ''
   base_url: ''
+  scope: ''
 minio:
   url: ''
 s3:
