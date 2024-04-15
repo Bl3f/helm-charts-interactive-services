@@ -1,6 +1,6 @@
 # jupyter-r
 
-![Version: 1.11.14](https://img.shields.io/badge/Version-1.11.14-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.11.15](https://img.shields.io/badge/Version-1.11.15-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The JupyterLab IDE with R and a collection of standard data science packages.
 
@@ -56,6 +56,7 @@ The JupyterLab IDE with R and a collection of standard data science packages.
 | keycloak.base_url | string | `""` |  |
 | keycloak.client_id | string | `""` |  |
 | keycloak.client_secret | string | `""` |  |
+| keycloak.scope | string | `""` |  |
 | kubernetes.enabled | bool | `false` |  |
 | kubernetes.role | string | `"view"` |  |
 | metaflow.configMapName | string | `""` |  |
