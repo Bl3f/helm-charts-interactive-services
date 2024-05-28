@@ -1,6 +1,6 @@
 # rstudio
 
-![Version: 1.12.17](https://img.shields.io/badge/Version-1.12.17-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.12.18](https://img.shields.io/badge/Version-1.12.18-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The RStudio IDE with a collection of standard data science packages.
 
@@ -50,6 +50,7 @@ The RStudio IDE with a collection of standard data science packages.
 | keycloak.base_url | string | `""` |  |
 | keycloak.client_id | string | `""` |  |
 | keycloak.client_secret | string | `""` |  |
+| keycloak.scope | string | `""` |  |
 | kubernetes.enabled | bool | `true` |  |
 | kubernetes.role | string | `"view"` |  |
 | nameOverride | string | `""` |  |
