@@ -70,6 +70,10 @@ spec:
             - name: KEYCLOAK_URL
               value: {{ .Values.keycloak.base_url }}
             {{- end }}
+            {{- if .Values.keycloak.scope }}
+            - name: SCOPE
+              value: {{ .Values.keycloak.scope }}
+            {{- end }}
           livenessProbe:
             httpGet:
               path: /health

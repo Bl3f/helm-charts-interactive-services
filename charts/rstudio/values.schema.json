@@ -6,6 +6,11 @@
           "description": "Keycloak configuration",
           "type": "object",
           "properties": {
+            "scope": {
+              "description": "The additional SCOPE for the openid connection",
+              "title": "SCOPE",
+              "type": "string"
+            },
             "client_id": {
               "description": "The CLIENT_ID for the openid connection",
               "title": "CLIENT_ID",
