@@ -72,7 +72,7 @@ spec:
             {{- end }}
             {{- if .Values.keycloak.scope }}
             - name: SCOPE
-              value: {{ .Values.keycloak.scope }}
+              value: "{{ .Values.keycloak.scope }}"
             {{- end }}
           livenessProbe:
             httpGet:
