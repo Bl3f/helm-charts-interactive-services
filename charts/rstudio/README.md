@@ -1,6 +1,6 @@
 # rstudio
 
-![Version: 1.12.19](https://img.shields.io/badge/Version-1.12.19-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.12.20](https://img.shields.io/badge/Version-1.12.20-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The RStudio IDE with a collection of standard data science packages.
 
@@ -90,9 +90,9 @@ The RStudio IDE with a collection of standard data science packages.
 | security.password | string | `"changeme"` |  |
 | securityContext | object | `{}` |  |
 | service.image.custom.enabled | bool | `false` |  |
-| service.image.custom.version | string | `"cblefari/onyxia-rstudio:r4.2.3"` |  |
+| service.image.custom.version | string | `"registry-tools.depp.in.adc.education.fr/rstudio:r4.4.2"` |  |
 | service.image.pullPolicy | string | `"IfNotPresent"` |  |
-| service.image.version | string | `"cblefari/onyxia-rstudio:r4.2.3"` |  |
+| service.image.version | string | `"registry-tools.depp.in.adc.education.fr/rstudio:r4.4.2"` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
 | serviceAccount.name | string | `""` |  |
