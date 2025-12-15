@@ -2,11 +2,11 @@
 
 service:
   image:
-    version: "cblefari/onyxia-rstudio:r4.2.3"
+    version: "registry-tools.depp.in.adc.education.fr/rstudio:r4.4.2"
     pullPolicy: IfNotPresent
     custom:
       enabled: false
-      version: "cblefari/onyxia-rstudio:r4.2.3"
+      version: "registry-tools.depp.in.adc.education.fr/rstudio:r4.4.2"
 
 security:
   password: "changeme"

@@ -3,84 +3,87 @@
     "type": "object",
     "properties": {
         "keycloak": {
-          "description": "Keycloak configuration",
-          "type": "object",
-          "properties": {
-            "scope": {
-              "description": "The additional SCOPE for the openid connection",
-              "title": "SCOPE",
-              "type": "string"
-            },
-            "client_id": {
-              "description": "The CLIENT_ID for the openid connection",
-              "title": "CLIENT_ID",
-              "type": "string"
-            },
-            "client_secret": {
-              "description": "The CLIENT_SECRET for the openid connection",
-              "title": "CLIENT_SECRET",
-              "type": "string"
-            },
-            "base_url": {
-              "description": "The BASE_URL should include the server and the realm",
-              "title": "BASE_URL",
-              "type": "string",
-              "default": "keycloak.idee.depp.in.adc.education.fr"
+            "description": "Keycloak configuration",
+            "type": "object",
+            "properties": {
+                "scope": {
+                    "description": "The additional SCOPE for the openid connection",
+                    "title": "SCOPE",
+                    "type": "string"
+                },
+                "client_id": {
+                    "description": "The CLIENT_ID for the openid connection",
+                    "title": "CLIENT_ID",
+                    "type": "string"
+                },
+                "client_secret": {
+                    "description": "The CLIENT_SECRET for the openid connection",
+                    "title": "CLIENT_SECRET",
+                    "type": "string"
+                },
+                "base_url": {
+                    "description": "The BASE_URL should include the server and the realm",
+                    "title": "BASE_URL",
+                    "type": "string",
+                    "default": "keycloak.idee.depp.in.adc.education.fr"
+                }
             }
-          }
         },
         "service": {
             "description": "Service specific configuration",
             "type": "object",
             "properties": {
-                "image" : {
+                "image": {
                     "description": "image docker",
-                    "type": "object",  
+                    "type": "object",
                     "properties": {
-                      "pullPolicy": {
-                        "type": "string",
-                        "description": "option when pulling the docker image",
-                        "default": "IfNotPresent",
-                        "enum": ["IfNotPresent","Always","Never"]
-                      },
-                      "version": {
-                        "description": "supported versions",
-                        "type": "string",
-                        "listEnum": [
-                            "cblefari/onyxia-rstudio:r4.2.3",
-                            "cblefari/onyxia-rstudio:r4.1.3"
-                          ],
-                        "render": "list",
-                        "pattern": "^[a-z0-9-_./]+(:[a-z0-9-_.]+)?$",
-                        "hidden": {
-                            "value": true,
-                            "path": "service/image/custom/enabled"
-                        },
-                        "default": "cblefari/onyxia-rstudio:r4.2.3"
-                      },
-                      "custom" : {
-                        "description": "use a custom RStudio docker image",
-                        "type": "object",  
-                        "properties": {
-                          "enabled": {
-                            "title": "custom image",
-                            "type": "boolean",
-                            "description": "use a custom RStudio docker image",
-                            "default": false
-                          },
-                          "version": {
-                            "description": "RStudio unsupported version",
+                        "pullPolicy": {
                             "type": "string",
-                            "default": "cblefari/onyxia-rstudio:r4.2.3",
+                            "description": "option when pulling the docker image",
+                            "default": "IfNotPresent",
+                            "enum": [
+                                "IfNotPresent",
+                                "Always",
+                                "Never"
+                            ]
+                        },
+                        "version": {
+                            "description": "supported versions",
+                            "type": "string",
+                            "listEnum": [
+                                "registry-tools.depp.in.adc.education.fr/rstudio:r4.4.2"
+                            ],
+                            "render": "list",
                             "pattern": "^[a-z0-9-_./]+(:[a-z0-9-_.]+)?$",
                             "hidden": {
-                                "value": false,
+                                "value": true,
                                 "path": "service/image/custom/enabled"
+                            },
+                            "default": "registry-tools.depp.in.adc.education.fr/rstudio:r4.4.2"
+                        },
+                        "custom": {
+                            "description": "use a custom RStudio docker image",
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "title": "custom image",
+                                    "type": "boolean",
+                                    "description": "use a custom RStudio docker image",
+                                    "default": false
+                                },
+                                "version": {
+                                    "description": "RStudio unsupported version",
+                                    "type": "string",
+                                    "default": "registry-tools.depp.in.adc.education.fr/rstudio:r4.4.2",
+                                    "pattern": "^[a-z0-9-_./]+(:[a-z0-9-_.]+)?$",
+                                    "hidden": {
+                                        "value": false,
+                                        "path": "service/image/custom/enabled"
+                                    }
+                                }
                             }
-                          }
-                        }        
-                      }
-                    }        
+                        }
+                    }
                 }
             }
         },
@@ -92,42 +95,42 @@
                     "description": "Guaranteed resources",
                     "type": "object",
                     "properties": {
-                      "cpu": {
-                        "description": "The amount of cpu guaranteed",
-                        "title": "CPU",
-                        "type": "string",
-                        "default": "100m",
-                        "render": "slider",
-                        "sliderMin": 50,
-                        "sliderMax": 40000,
-                        "sliderStep": 50,
-                        "sliderUnit": "m",
-                        "sliderExtremity": "down",
-                        "sliderExtremitySemantic": "guaranteed",
-                        "sliderRangeId": "cpu",
-                        "x-onyxia": {
-                            "overwriteDefaultWith": "region.resources.cpuRequest",
-                            "useRegionSliderConfig": "cpu"
+                        "cpu": {
+                            "description": "The amount of cpu guaranteed",
+                            "title": "CPU",
+                            "type": "string",
+                            "default": "100m",
+                            "render": "slider",
+                            "sliderMin": 50,
+                            "sliderMax": 40000,
+                            "sliderStep": 50,
+                            "sliderUnit": "m",
+                            "sliderExtremity": "down",
+                            "sliderExtremitySemantic": "guaranteed",
+                            "sliderRangeId": "cpu",
+                            "x-onyxia": {
+                                "overwriteDefaultWith": "region.resources.cpuRequest",
+                                "useRegionSliderConfig": "cpu"
+                            }
+                        },
+                        "memory": {
+                            "description": "The amount of memory guaranteed",
+                            "title": "memory",
+                            "type": "string",
+                            "default": "2Gi",
+                            "render": "slider",
+                            "sliderMin": 1,
+                            "sliderMax": 200,
+                            "sliderStep": 1,
+                            "sliderUnit": "Gi",
+                            "sliderExtremity": "down",
+                            "sliderExtremitySemantic": "guaranteed",
+                            "sliderRangeId": "memory",
+                            "x-onyxia": {
+                                "overwriteDefaultWith": "region.resources.memoryRequest",
+                                "useRegionSliderConfig": "memory"
+                            }
                         }
-                      },
-                      "memory": {
-                        "description": "The amount of memory guaranteed",
-                        "title": "memory",
-                        "type": "string",
-                        "default": "2Gi",
-                        "render": "slider",
-                        "sliderMin": 1,
-                        "sliderMax": 200,
-                        "sliderStep": 1,
-                        "sliderUnit": "Gi",
-                        "sliderExtremity": "down",
-                        "sliderExtremitySemantic": "guaranteed",
-                        "sliderRangeId": "memory",
-                        "x-onyxia": {
-                            "overwriteDefaultWith": "region.resources.memoryRequest",
-                            "useRegionSliderConfig": "memory"
-                        }
-                      }
                     }
                 },
                 "limits": {
@@ -151,10 +154,10 @@
                                 "overwriteDefaultWith": "region.resources.cpuLimit",
                                 "useRegionSliderConfig": "cpu"
                             }
-                          },
-                          "memory": {
+                        },
+                        "memory": {
                             "description": "The maximum amount of memory",
-                            "title": "Memory", 
+                            "title": "Memory",
                             "type": "string",
                             "default": "50Gi",
                             "render": "slider",
@@ -169,11 +172,11 @@
                                 "overwriteDefaultWith": "region.resources.memoryLimit",
                                 "useRegionSliderConfig": "memory"
                             }
-                          }
+                        }
                     }
                 }
             }
-        },  
+        },
         "persistence": {
             "description": "Configuration for persistence",
             "type": "object",
@@ -199,9 +202,9 @@
                         "useRegionSliderConfig": "disk"
                     },
                     "hidden": {
-                      "value": false,
-                      "path": "persistence/enabled"
-                    }                    
+                        "value": false,
+                        "path": "persistence/enabled"
+                    }
                 }
             }
         },
@@ -225,64 +228,64 @@
                     "type": "object",
                     "description": "IP protection",
                     "properties": {
-                      "enabled": {
-                        "type": "boolean",
-                        "title": "Enable IP protection",
-                        "description": "Only the configured set of IPs will be able to reach the service",
-                        "default": true,
-                        "x-form": {
-                          "value": "{{region.defaultIpProtection}}"
+                        "enabled": {
+                            "type": "boolean",
+                            "title": "Enable IP protection",
+                            "description": "Only the configured set of IPs will be able to reach the service",
+                            "default": true,
+                            "x-form": {
+                                "value": "{{region.defaultIpProtection}}"
+                            },
+                            "x-onyxia": {
+                                "overwriteDefaultWith": "region.defaultIpProtection"
+                            }
                         },
-                        "x-onyxia": {
-                            "overwriteDefaultWith": "region.defaultIpProtection"
+                        "ip": {
+                            "type": "string",
+                            "description": "the white list of IP is whitespace",
+                            "title": "Whitelist of IP",
+                            "x-form": {
+                                "value": "{{user.ip}}"
+                            },
+                            "x-onyxia": {
+                                "overwriteDefaultWith": "{{user.ip}}"
+                            },
+                            "hidden": {
+                                "value": false,
+                                "path": "security/allowlist/enabled"
+                            }
                         }
-                      },
-                      "ip": {
-                        "type": "string",
-                        "description": "the white list of IP is whitespace",
-                        "title": "Whitelist of IP",
-                        "x-form": {
-                          "value": "{{user.ip}}"
-                        },
-                        "x-onyxia": {
-                            "overwriteDefaultWith": "{{user.ip}}"
-                        },
-                        "hidden": {
-                            "value": false,
-                            "path": "security/allowlist/enabled"
-                        } 
-                      }
                     }
                 },
                 "networkPolicy": {
                     "type": "object",
                     "description": "Define access policy to the service",
                     "properties": {
-                      "enabled": {
-                        "type": "boolean",
-                        "title": "Enable network policy",
-                        "description": "Only pod from the same namespace will be allowed",
-                        "default": true,
-                        "x-form": {
-                          "value": "{{region.defaultNetworkPolicy}}"
+                        "enabled": {
+                            "type": "boolean",
+                            "title": "Enable network policy",
+                            "description": "Only pod from the same namespace will be allowed",
+                            "default": true,
+                            "x-form": {
+                                "value": "{{region.defaultNetworkPolicy}}"
+                            },
+                            "x-onyxia": {
+                                "overwriteDefaultWith": "region.defaultNetworkPolicy"
+                            }
                         },
-                        "x-onyxia": {
-                            "overwriteDefaultWith": "region.defaultNetworkPolicy"
+                        "from": {
+                            "type": "array",
+                            "description": "Array of source allowed to have network access to your service",
+                            "default": [],
+                            "x-form": {
+                                "hidden": true,
+                                "value": "{{region.from}}"
+                            },
+                            "x-onyxia": {
+                                "hidden": true,
+                                "overwriteDefaultWith": "region.from"
+                            }
                         }
-                      },
-                      "from": {
-                        "type": "array",
-                        "description": "Array of source allowed to have network access to your service",
-                        "default" : [], 
-                        "x-form": {
-                          "hidden": true,
-                          "value": "{{region.from}}"
-                        },
-                        "x-onyxia": {
-                            "hidden": true,
-                            "overwriteDefaultWith": "region.from"
-                        }
-                      }
                     }
                 }
             }
@@ -291,25 +294,25 @@
             "description": "configuration of your kubernetes access",
             "type": "object",
             "properties": {
-              "enabled": {
-                "type": "boolean",
-                "description": "allow your service to access your namespace ressources",
-                "default": true
-              },
-              "role": {
-                "type": "string",
-                "description": "bind your service account to this kubernetes default role",
-                "default": "view",
-                "hidden": {
-                  "value": false,
-                  "path": "kubernetes/enabled"
+                "enabled": {
+                    "type": "boolean",
+                    "description": "allow your service to access your namespace ressources",
+                    "default": true
                 },
-                "enum": [
-                  "view",
-                  "edit",
-                  "admin"
-                ]
-              }
+                "role": {
+                    "type": "string",
+                    "description": "bind your service account to this kubernetes default role",
+                    "default": "view",
+                    "hidden": {
+                        "value": false,
+                        "path": "kubernetes/enabled"
+                    },
+                    "enum": [
+                        "view",
+                        "edit",
+                        "admin"
+                    ]
+                }
             }
         },
         "git": {
@@ -596,17 +599,17 @@
                     }
                 },
                 "userHostname": {
-                  "type": "string",
-                  "form": true,
-                  "title": "Hostname",
-                  "x-form": {
-                    "hidden": true,
-                    "value": "{{project.id}}-{{k8s.randomSubdomain}}-user.{{k8s.domain}}"
-                  },
-                  "x-onyxia": {
-                    "hidden": true,
-                    "overwriteDefaultWith": "{{project.id}}-{{k8s.randomSubdomain}}-user.{{k8s.domain}}"
-                  }
+                    "type": "string",
+                    "form": true,
+                    "title": "Hostname",
+                    "x-form": {
+                        "hidden": true,
+                        "value": "{{project.id}}-{{k8s.randomSubdomain}}-user.{{k8s.domain}}"
+                    },
+                    "x-onyxia": {
+                        "hidden": true,
+                        "overwriteDefaultWith": "{{project.id}}-{{k8s.randomSubdomain}}-user.{{k8s.domain}}"
+                    }
                 },
                 "ingressClassName": {
                     "type": "string",
@@ -663,72 +666,72 @@
             "form": true,
             "title": "Networking detail",
             "properties": {
-              "user": {
-                "type": "object",
-                "description": "user defined port",
-                "properties": {
-                  "enabled": {
-                    "type": "boolean",
-                    "title": "Enable a custom service port",
-                    "description": "Enable a custom service port",
-                    "default": false
-                  },
-                  "port": {
-                    "type": "integer",
-                    "description": "port of the custom service",
-                    "title": "Custom service port",
-                    "hidden": {
-                      "value": false,
-                      "path": "networking/user/enabled"
-                    },   
-                    "default": 5000
-                  }
+                "user": {
+                    "type": "object",
+                    "description": "user defined port",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "title": "Enable a custom service port",
+                            "description": "Enable a custom service port",
+                            "default": false
+                        },
+                        "port": {
+                            "type": "integer",
+                            "description": "port of the custom service",
+                            "title": "Custom service port",
+                            "hidden": {
+                                "value": false,
+                                "path": "networking/user/enabled"
+                            },
+                            "default": 5000
+                        }
+                    }
                 }
-              }
             }
         },
         "init": {
             "description": "Init parameters",
             "type": "object",
             "properties": {
-              "regionInit": {
-                "type": "string",
-                "description": "region initialization script",
-                "default": "",
-                "x-form": {
-                  "hidden": true,
-                  "value": "{{k8s.initScriptUrl}}"
+                "regionInit": {
+                    "type": "string",
+                    "description": "region initialization script",
+                    "default": "",
+                    "x-form": {
+                        "hidden": true,
+                        "value": "{{k8s.initScriptUrl}}"
+                    },
+                    "x-onyxia": {
+                        "hidden": true,
+                        "overwriteDefaultWith": "{{k8s.initScriptUrl}}"
+                    }
                 },
-                "x-onyxia": {
-                  "hidden": true,
-                  "overwriteDefaultWith": "{{k8s.initScriptUrl}}"
+                "personalInit": {
+                    "type": "string",
+                    "description": "user initialization script",
+                    "default": ""
+                },
+                "personalInitArgs": {
+                    "type": "string",
+                    "description": "args for user initialization script",
+                    "default": ""
                 }
-              },
-              "personalInit": {
-                "type": "string",
-                "description": "user initialization script",
-                "default": ""
-              },
-              "personalInitArgs": {
-                "type": "string",
-                "description": "args for user initialization script",
-                "default": ""
-              }
             }
         },
         "repository": {
             "description": "r repository (eg : cran mirrors or proxy caches)",
             "type": "object",
             "properties": {
-              "rRepository": {
-                "type": "string",
-                "description": "r repository",
-                "default": "",
-                "x-onyxia": {
-                  "hidden": true,
-                  "overwriteDefaultWith": "{{packageRepositoryInjection.cranProxyUrl}}"
+                "rRepository": {
+                    "type": "string",
+                    "description": "r repository",
+                    "default": "",
+                    "x-onyxia": {
+                        "hidden": true,
+                        "overwriteDefaultWith": "{{packageRepositoryInjection.cranProxyUrl}}"
+                    }
                 }
-              }
             }
         },
         "startupProbe": {

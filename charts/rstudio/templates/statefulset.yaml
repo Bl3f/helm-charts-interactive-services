@@ -51,9 +51,11 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       subdomain: {{ include "library-chart.fullname" . }}
       hostname: rstudio
+      imagePullSecrets:
+        - name: private-registry
       containers:
         - name: {{ .Chart.Name }}-nginx-sso-proxy
-          image: cblefari/onyxia-nginx-sso:latest
+          image: registry-tools.depp.in.adc.education.fr/nginx-sso:latest
           imagePullPolicy: {{ .Values.service.image.pullPolicy }}
           env:
             - name: RSTUDIO_URL
